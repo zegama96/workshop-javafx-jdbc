@@ -12,8 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<VBox prefHeight="350.0" prefWidth="324.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/15.0.1">
+<VBox prefHeight="350.0" prefWidth="324.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.DepartmentListController">
    <children>
       <Label alignment="TOP_LEFT" prefHeight="0.0" prefWidth="324.0" text="Department Registration" textAlignment="RIGHT">
          <VBox.margin>
@@ -28,7 +27,7 @@
       </Label>
       <ToolBar prefHeight="40.0" prefWidth="200.0">
         <items>
-          <Button mnemonicParsing="false" text="New" />
+          <Button fx:id="btNew" mnemonicParsing="false" onAction="#onBtNewAction" text="New" />
         </items>
          <effect>
             <DisplacementMap>
@@ -41,10 +40,10 @@
             <Cursor fx:constant="N_RESIZE" />
          </cursor>
       </ToolBar>
-      <TableView prefHeight="280.0" prefWidth="324.0">
+      <TableView fx:id="tableViewDepartment" prefHeight="280.0" prefWidth="324.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Id" />
-          <TableColumn prefWidth="75.0" text="Name" />
+          <TableColumn fx:id="tableColumnId" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="tableColumnName" prefWidth="75.0" text="Name" />
         </columns>
       </TableView>
    </children>
